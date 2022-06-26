@@ -13,6 +13,10 @@ import com.jhonhell.words.databinding.ActivityMainBinding
 import com.jhonhell.words.entities.Word
 import com.jhonhell.words.viewmodels.WordViewModel
 import com.jhonhell.words.viewmodels.WordViewModelFactory
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     private val wordViewModel: WordViewModel by viewModels {
         WordViewModelFactory((application as WordsApplication).repository)
-    }
+    } 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

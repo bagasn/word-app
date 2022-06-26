@@ -3,7 +3,9 @@ package com.jhonhell.words.viewmodels
 import androidx.lifecycle.*
 import com.jhonhell.words.database.repository.WordRepository
 import com.jhonhell.words.entities.Word
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class WordViewModel(private val repository: WordRepository) : ViewModel() {
 
